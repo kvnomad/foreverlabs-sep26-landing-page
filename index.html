@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's New for Members | Forever Labs</title>
+<meta name="description" content="Forever Labs now banks blood and skin cells, and reads your full genetic and epigenetic record from your own stored sample. See what it means for your membership.">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1C271D; --ink-2:#26352A; --ink-3:#324436;
+  --paper:#F8F8F4; --cream:#F6F6F0; --white:#FFFFFF;
+  --mist:#EFF2EF; --mist-2:rgba(239,242,239,.72); --mist-3:rgba(239,242,239,.5);
+  --sage:#5C8162; --sage-2:#4A6B50; --sage-soft:#E6ECE5;
+  --gold:#E3B65C; --gold-soft:rgba(227,182,92,.14);
+  --text:#1C271D; --muted:#56635A; --faint:#7D887F;
+  --line:rgba(28,39,29,.12); --line-dark:rgba(239,242,239,.14);
+  --serif:bigCaslonRegular,"Libre Caslon Text",Georgia,serif;
+  --sans:neueHaasDisplayRoman,"Hanken Grotesk",system-ui,-apple-system,sans-serif;
+  --radius:14px; --radius-sm:10px;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--text);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.serif{font-family:var(--serif);font-weight:400}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1.1}
+h2{font-size:clamp(2rem,3.6vw,3rem)}
+h3{font-size:1.5rem;line-height:1.2}
+.eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:500}
+.dark .eyebrow{color:var(--gold)}
+.lede{font-size:1.2rem;color:var(--muted);max-width:40rem}
+.dark{background:var(--ink);color:var(--mist)}
+.dark .lede,.dark p{color:var(--mist-2)}
+section{padding:112px 0}
+#hero-cta .sm{display:none}
+@media (max-width:640px){#hero-cta .sm{display:inline}}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:500 1rem/1 var(--sans);padding:15px 24px;border-radius:999px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-light{background:var(--mist);color:var(--ink)}
+.btn-light:hover{background:#fff}
+.btn-ghost-light{border-color:var(--line-dark);color:var(--mist)}
+.btn-ghost-light:hover{border-color:var(--mist-2)}
+.btn-dark{background:var(--ink);color:var(--mist)}
+.btn-dark:hover{background:var(--ink-3)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-sage{background:var(--sage);color:#fff}
+.btn-sage:hover{background:var(--sage-2)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(248,248,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand img{height:26px;width:auto}
+.header-right{display:flex;align-items:center;gap:22px;font-size:.92rem}
+.header-right a{text-decoration:none;color:var(--muted)}
+.header-right a:hover{color:var(--ink)}
+.header-right .btn{padding:10px 18px;font-size:.9rem;color:#fff}
+.pill{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+
+/* hero */
+.hero{padding:88px 0 96px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,4.6vw,3.7rem);color:var(--mist);margin:22px 0 26px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero .lede{font-size:1.22rem;color:var(--mist-2)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.hero-note{margin-top:28px;font-size:.9rem;color:var(--mist-3)}
+.hero-figure{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--ink-2)}
+.hero-figure img{width:100%;height:100%;object-fit:cover;object-position:60% center}
+.hero-figure figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(28,39,29,.86);backdrop-filter:blur(6px);border-radius:12px;padding:16px 18px;color:var(--mist)}
+.hero-figure figcaption small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.hero-figure figcaption span{font-family:var(--serif);font-size:1.15rem}
+.hero-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:72px;border-top:1px solid var(--line-dark)}
+.hero-strip a{display:block;padding:24px 24px 0 0;text-decoration:none;color:var(--mist)}
+.hero-strip a + a{padding-left:24px;border-left:1px solid var(--line-dark)}
+.hero-strip .num{font-size:.78rem;letter-spacing:.14em;color:var(--gold)}
+.hero-strip .t{display:block;font-family:var(--serif);font-size:1.3rem;margin:6px 0 4px}
+.hero-strip .d{font-size:.95rem;color:var(--mist-3)}
+.hero-strip a:hover .t{color:var(--gold)}
+
+/* why now */
+.reasons{background:var(--cream);border-bottom:1px solid var(--line)}
+.reasons-head{max-width:44rem;margin-bottom:44px}
+.reasons-head h2{margin-top:14px}
+.reasons-head p{color:var(--muted);margin-top:14px}
+.reasons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.reason{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;display:flex;flex-direction:column}
+.reason .rq{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
+.reason h3{font-size:1.45rem;line-height:1.2;margin:10px 0 14px}
+.reason p{color:var(--muted);font-size:.96rem}
+.reason p + p{margin-top:12px}
+.rstat{margin-top:auto;padding-top:22px;border-top:1px solid var(--line);margin-top:24px;display:flex;flex-direction:column;gap:4px}
+.reason .rstat{margin-top:auto}
+.reason p:last-of-type{margin-bottom:24px}
+.rstat b{font-family:var(--serif);font-weight:400;font-size:2rem;color:var(--sage-2);line-height:1.1}
+.rstat span{font-size:.86rem;color:var(--faint);line-height:1.45}
+@media (max-width:900px){.reasons-grid{grid-template-columns:1fr}}
+.reason p.later{margin-bottom:0}
+.reason .later{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);font-size:.93rem;color:var(--muted)}
+.reason .later span{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:6px}
+.reason > p:not(.later){margin-bottom:22px}
+.why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end}
+.why h2{max-width:34rem;margin-top:14px}
+.why p{color:var(--muted)}
+.why p + p{margin-top:16px}
+.usecase{margin:18px 0 0;padding:16px 18px;background:var(--sage-soft);border-radius:12px}
+.usecase span{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-2);margin-bottom:6px}
+.usecase p{color:var(--ink)!important;font-size:.92rem!important;line-height:1.5;margin:0!important}
+.checkpoints{margin:56px 0 0;padding:40px 40px 32px;border:1px solid var(--line);border-radius:22px;background:var(--paper)}
+.cp-head{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start;margin-bottom:20px}
+.cp-head h3{font-size:clamp(1.6rem,2.6vw,2.1rem);line-height:1.15}
+.cp-head p{color:var(--muted);font-size:.98rem}
+.cp-svg{width:100%;height:auto;display:block}
+.cp-svg-m{display:none;width:100%;max-width:380px;height:auto;margin:10px auto 0}
+.cp-svg-m text{font-family:var(--sans);font-size:14px;fill:var(--muted)}
+.cp-svg-m text.b{font-weight:600;font-size:16px;fill:var(--ink)}
+@media (max-width:700px){.cp-svg,.cp-labels{display:none!important}.cp-svg-m{display:block}}
+.cp-labels{list-style:none;padding:0;margin:6px 0 0;display:grid;grid-template-columns:18% 22% 22% 22% 16%;text-align:center}
+.cp-labels li{padding:0 8px;display:flex;flex-direction:column;gap:4px}
+.cp-labels b{font-weight:600;font-size:.95rem;color:var(--ink)}
+.cp-labels span{font-size:.85rem;color:var(--muted);line-height:1.4}
+.cp-labels .cp-future{text-align:right}
+@media (max-width:900px){.checkpoints{padding:28px 20px}.cp-head{grid-template-columns:1fr;gap:12px}.cp-labels{grid-template-columns:1fr;text-align:left;gap:14px;margin-top:18px}.cp-labels li{padding:0 0 0 14px;border-left:3px solid var(--gold)}.cp-labels .cp-vial{border-color:var(--sage)}.cp-labels .cp-future{text-align:left;border-color:var(--line)}}
+.pair{margin-top:56px;padding-top:40px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr auto 1fr auto 1.15fr;gap:18px;align-items:stretch}
+.pair-item{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px 22px;display:flex;flex-direction:column;gap:8px}
+.pair-item .pk{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+.pair-item b{font-family:var(--serif);font-weight:400;font-size:1.35rem;line-height:1.2;color:var(--ink)}
+.pair-item span:last-child{color:var(--muted);font-size:.93rem;line-height:1.5}
+.pair-item.hi{background:var(--ink);border-color:var(--ink)}
+.pair-item.hi .pk{color:var(--gold)}
+.pair-item.hi b{color:var(--mist)}
+.pair-item.hi span:last-child{color:rgba(239,242,239,.86)}
+.pair-op{align-self:center;font-family:var(--serif);font-size:2rem;color:var(--sage)}
+.pair-line{margin-top:32px;font-size:1.5rem;color:var(--ink);text-align:center}
+@media (max-width:900px){.pair{grid-template-columns:1fr;gap:10px}.pair-op{justify-self:center;line-height:1}}
+.quote-line{margin-top:56px;padding-top:32px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;align-items:baseline;flex-wrap:wrap}
+.quote-line .serif{font-size:1.6rem}
+.quote-line span{color:var(--faint);font-size:.95rem}
+
+/* product sections */
+.product{border-top:1px solid var(--line)}
+.product.alt{background:var(--cream)}
+.product-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:72px;align-items:start}
+.product-head .tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
+.product-head .tag .n{font-family:var(--serif);font-size:1rem;width:34px;height:34px;border-radius:50%;border:1px solid var(--sage);color:var(--sage);display:grid;place-items:center}
+.product-head h2{margin-bottom:22px}
+.product-head p{color:var(--muted);max-width:32rem}
+.product-head p + p{margin-top:14px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:36px}
+.facts div{background:var(--white);padding:18px 18px 16px}
+.product.alt .facts div{background:var(--white)}
+.facts dt{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.facts dd{font-family:var(--serif);font-size:1.25rem;margin-top:4px;line-height:1.25}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+.card h3{margin-bottom:6px}
+.card .sub{color:var(--muted);font-size:.98rem;margin-bottom:22px}
+.vault-list{list-style:none;border-top:1px solid var(--line)}
+.vault-list li{display:grid;grid-template-columns:1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.vault-list .qty{font-family:var(--serif);font-size:1.5rem;color:var(--sage);line-height:1}
+.vault-list b{font-weight:600;display:block;font-size:1rem}
+.vault-list span{color:var(--muted);font-size:.93rem}
+.card-foot{margin-top:18px;font-size:.9rem;color:var(--faint)}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:0 0 26px 52px}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--sage-soft);color:var(--sage-2);font-family:var(--serif);display:grid;place-items:center;font-size:.95rem}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:15.5px;top:38px;bottom:6px;width:1px;background:var(--line)}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--muted);font-size:.95rem}
+
+/* baseline (dark) */
+.baseline h2{max-width:40rem;margin:14px 0 22px}
+.baseline-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:56px}
+.dark .card{background:var(--ink-2);border-color:var(--line-dark)}
+.check-list{list-style:none}
+.check-list li{position:relative;padding:12px 0 12px 34px;border-bottom:1px solid var(--line-dark);color:var(--mist)}
+.check-list li:last-child{border-bottom:0}
+.check-list li::before{content:"";position:absolute;left:2px;top:19px;width:14px;height:8px;border-left:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(-45deg)}
+.check-list li small{display:block;color:var(--mist-3);font-size:.9rem;margin-top:2px}
+.timeline{position:relative;margin-top:8px}
+.tl-track{position:relative;height:2px;background:var(--line-dark);margin:44px 8px 0}
+.tl-track::after{content:"";position:absolute;left:0;top:0;height:2px;width:58%;background:linear-gradient(90deg,var(--gold),rgba(227,182,92,.35))}
+.tl-points{display:grid;grid-template-columns:repeat(3,1fr);margin-top:-8px}
+.tl-points div{position:relative;padding-top:26px}
+.tl-points div::before{content:"";position:absolute;top:0;left:8px;width:14px;height:14px;border-radius:50%;background:var(--ink);border:2px solid var(--gold)}
+.tl-points div:nth-child(3)::before{border-color:var(--mist-3);border-style:dashed}
+.tl-points .yr{font-family:var(--serif);font-size:1.35rem;color:var(--mist);display:block}
+.tl-points .lbl{font-size:.9rem;color:var(--mist-3);display:block;max-width:12rem}
+.price-row{display:flex;gap:28px;flex-wrap:wrap;margin-top:32px;padding-top:24px;border-top:1px solid var(--line-dark)}
+.price-row div b{display:block;font-family:var(--serif);font-weight:400;font-size:1.9rem;color:var(--gold);line-height:1.1}
+.price-row div span{font-size:.88rem;color:var(--mist-3)}
+.fine{font-size:.85rem;color:var(--mist-3);margin-top:22px}
+
+/* ladder */
+.ladder{background:var(--white)}
+.ladder-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:44px}
+.ladder-head h2{max-width:30rem;margin-top:14px}
+.ladder-head p{max-width:26rem;color:var(--muted)}
+.rungs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rung{border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px 26px;display:flex;flex-direction:column;background:var(--paper)}
+.rung .lvl{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
+.rung h3{font-size:1.75rem;margin:8px 0 6px}
+.rung .how{color:var(--muted);font-size:.95rem;min-height:3.1em}
+.rung dl{margin:22px 0 0;border-top:1px solid var(--line)}
+.rung dl div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.96rem}
+.rung dt{color:var(--muted)}
+.rung dd{font-weight:600;text-align:right}
+.rung .fin{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:.88rem;color:var(--muted)}
+.rung .fin b{color:var(--ink);font-weight:600}
+.hsa{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;color:var(--sage-2);margin-top:8px}
+.hsa::before{content:"";width:9px;height:5px;border-left:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(-45deg)}
+.rung .hsa{display:flex;margin:6px 0 0}
+.hsa.on-dark{color:var(--gold);margin:14px 0 0}
+.rung .life span.lk{display:block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-bottom:4px}
+.rung .life b small,.offer-side .amt small{font-family:var(--sans);font-size:.4em;font-weight:400;margin-left:4px;opacity:.8}
+.offer-side .amt{margin-top:8px}
+
+.finance{margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:20px 24px;border:1px solid var(--line);border-radius:16px;background:var(--white)}
+.finance b{display:block;font-family:var(--serif);font-weight:400;font-size:1.25rem;color:var(--ink)}
+.finance span{color:var(--muted);font-size:.95rem}
+.finance p{max-width:30rem;font-size:.82rem;color:var(--faint);line-height:1.5}
+.rung .life{margin-top:auto;padding-top:22px}
+.rung .life b{font-family:var(--serif);font-weight:400;font-size:2rem;display:block;line-height:1}
+.rung .life span{font-size:.88rem;color:var(--muted)}
+.rung.new{background:var(--white);border-color:rgba(92,129,98,.45)}
+.rung .badge{align-self:flex-start;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:var(--sage-soft);color:var(--sage-2);padding:4px 10px;border-radius:999px;margin-bottom:14px}
+.ladder-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.ladder-notes div{font-size:.93rem;color:var(--muted);padding:16px 18px;border-radius:var(--radius-sm);background:var(--cream)}
+.ladder-notes b{color:var(--ink);font-weight:600}
+
+/* next step */
+.next{background:var(--cream);border-top:1px solid var(--line)}
+.ocs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.oc{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:30px 28px;display:flex;flex-direction:column}
+.oc .for{align-self:flex-start;font-size:.85rem;font-weight:600;color:var(--ink);background:var(--sage-soft);border-radius:10px;padding:8px 14px;line-height:1.3;min-height:calc(2.6em + 16px);display:flex;align-items:center}
+.oc h3{margin-top:14px !important}
+.oc h3{font-size:1.5rem;margin:10px 0 0;line-height:1.2;min-height:2.4em}
+.oc-price{font-family:var(--serif);font-size:3rem;line-height:1;margin-top:16px;color:var(--ink)}
+.oc-price small{font-family:var(--sans);font-size:.4em;margin-left:4px;color:var(--muted)}
+.oc-price.word{font-size:2.3rem;margin-top:6px}
+.oc-pb{min-height:150px;margin-top:22px}
+.oc-pb .oc-price{margin-top:0}
+.oc-fin{font-size:.9rem;color:var(--ink);margin-top:8px}
+.oc-pb .hsa{margin-top:8px}
+.oc-pb .oc-note{min-height:0;margin-top:6px}
+.rung .life .fin-with{display:block;margin-top:6px;color:var(--ink)}
+.rung .life .hsa{display:flex;margin:6px 0 2px}
+.rung .life span.inc{display:block}
+.oc-note{font-size:.9rem;color:var(--muted);margin-top:8px;min-height:3em}
+.oc .offer-includes{margin:20px 0 24px;flex:1}
+.oc .offer-includes li{font-size:.93rem}
+.oc .btn{align-self:flex-start}
+.oc-dl{margin-top:14px;font-size:.85rem;color:var(--sage-2)}
+@media (max-width:900px){.ocs{grid-template-columns:1fr}.oc h3,.oc-note{min-height:0}.oc .for{min-height:0}.oc-pb{min-height:0}}
+
+.next-head{text-align:center;max-width:44rem;margin:0 auto 40px}
+.next-head h2{margin:14px 0 14px}
+.next-head p{color:var(--muted)}
+.tabs{display:flex;justify-content:center;gap:6px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:6px;width:max-content;max-width:100%;margin:0 auto 36px;overflow-x:auto}
+.tab{font:500 .95rem/1 var(--sans);color:var(--muted);background:transparent;border:0;border-radius:999px;padding:13px 20px;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--mist)}
+.panel{display:none}
+.panel.active{display:block;animation:fade .35s ease}
+.panel.general{display:block}
+.panel.general .offer{grid-template-columns:1fr}
+.panel.general .offer-ctas{margin-top:24px}
+.panel[hidden],.tabs[hidden]{display:none!important}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.offer{display:grid;grid-template-columns:1.25fr .75fr;gap:0;background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.offer-main{padding:44px 44px 40px}
+.offer-main .for{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:500}
+.offer-main h3{font-size:clamp(1.7rem,2.6vw,2.2rem);margin:12px 0 16px}
+.offer-main > p{color:var(--muted);max-width:34rem}
+.offer-includes{list-style:none;margin:26px 0 30px;border-top:1px solid var(--line)}
+.offer-includes li{position:relative;padding:13px 0 13px 30px;border-bottom:1px solid var(--line);font-size:.98rem}
+.offer-includes li::before{content:"";position:absolute;left:2px;top:20px;width:12px;height:7px;border-left:1.5px solid var(--sage);border-bottom:1.5px solid var(--sage);transform:rotate(-45deg)}
+.offer-includes li span{color:var(--muted)}
+.offer-ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.offer-side{background:var(--ink);color:var(--mist);padding:44px 36px;display:flex;flex-direction:column}
+.offer-side .lbl{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.offer-side .amt{font-family:var(--serif);font-size:3.2rem;line-height:1;margin:14px 0 6px}
+.offer-side .amt.amt-word{font-size:clamp(2rem,3.4vw,2.6rem)}
+.offer-side .amt-note{font-size:.93rem;color:var(--mist-2)}
+.offer-side hr{border:0;border-top:1px solid var(--line-dark);margin:26px 0}
+.offer-side .also{font-size:.93rem;color:var(--mist-2)}
+.offer-side .also b{color:var(--mist);font-weight:500;display:block;margin-bottom:4px}
+.offer-side .also + .also{margin-top:16px}
+.offer-side .deadline{margin-top:auto;padding-top:26px;font-size:.88rem;color:var(--gold)}
+.more-asks{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+.ask{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;display:flex;flex-direction:column}
+.ask .k{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.ask h4{font-family:var(--serif);font-weight:400;font-size:1.35rem;margin:8px 0 8px;line-height:1.2}
+.ask p{color:var(--muted);font-size:.96rem;flex:1}
+.ask a{margin-top:16px;font-weight:500;font-size:.95rem;color:var(--sage-2);text-decoration:none}
+.ask a:hover{text-decoration:underline}
+.not-sure{text-align:center;margin-top:30px;color:var(--muted);font-size:.95rem}
+.not-sure a{color:var(--ink);font-weight:500}
+
+/* trust */
+.trust{background:var(--white);border-top:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.trust-h{margin-top:14px;font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.15}
+.doc{display:flex;gap:22px;align-items:center}
+.doc img{width:112px;height:112px;border-radius:50%;object-fit:cover;object-position:top}
+.doc .name{font-family:var(--serif);font-size:1.6rem;line-height:1.15}
+.doc .role{color:var(--muted);font-size:.95rem}
+.doc blockquote{margin-top:10px}
+.trust-points{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.trust-points div{border-top:2px solid var(--sage);padding-top:18px}
+.trust-points b{display:block;font-family:var(--serif);font-weight:400;font-size:1.3rem;margin-bottom:6px;line-height:1.2}
+.trust-points span{color:var(--muted);font-size:.95rem}
+
+/* faq */
+.faq{background:var(--paper);border-top:1px solid var(--line)}
+.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:64px}
+.faq-grid h2{margin-top:14px}
+.faq-grid .aside p{color:var(--muted);margin-top:16px}
+details{border-bottom:1px solid var(--line)}
+details:first-child{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;position:relative;font-size:1.06rem;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:30px;width:10px;height:10px;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);transform:rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:rotate(225deg);top:34px}
+details .a{padding:0 40px 24px 0;color:var(--muted)}
+details .a p + p{margin-top:10px}
+
+/* close */
+.close{padding:104px 0;text-align:center}
+.close h2{max-width:40rem;margin:14px auto 18px;color:var(--mist)}
+.close p{max-width:34rem;margin:0 auto}
+.close .hero-ctas{justify-content:center}
+.signoff{margin-top:44px;color:var(--mist-3);font-size:.95rem}
+.signoff b{display:block;font-family:var(--serif);font-weight:400;color:var(--mist);font-size:1.2rem}
+
+footer{background:var(--ink);color:var(--mist-3);border-top:1px solid var(--line-dark);padding:36px 0 44px;font-size:.84rem}
+footer .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:18px}
+footer .row a{color:var(--mist-2);text-decoration:none;margin-left:18px}
+footer .row a:hover{color:var(--mist)}
+footer p{max-width:62rem;line-height:1.55}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.panel.active{animation:none}}
+
+/* responsive */
+@media (max-width:980px){
+  section{padding:84px 0}
+  .hero-grid,.why-grid,.product-grid,.baseline-grid,.trust-grid,.faq-grid{grid-template-columns:1fr;gap:44px}
+  .hero-figure{aspect-ratio:16/10}
+  .rungs,.ladder-notes,.trust-points{grid-template-columns:1fr}
+  .rung .how{min-height:0}
+  .offer{grid-template-columns:1fr}
+  .more-asks{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  section{padding:68px 0}
+  .hero{padding:56px 0 64px}
+  .hero-strip{grid-template-columns:1fr;margin-top:48px}
+  .hero-strip a,.hero-strip a + a{padding:18px 0;border-left:0;border-bottom:1px solid var(--line-dark)}
+  .facts{grid-template-columns:1fr}
+  .header-right .hide-sm{display:none}
+  .offer-main{padding:30px 24px}
+  .offer-side{padding:30px 24px}
+  .card{padding:24px}
+  .hero .hero-ctas{flex-wrap:nowrap;gap:8px}
+  .hero .hero-ctas .btn{padding:14px 12px;font-size:.92rem;white-space:nowrap;flex:1 1 0;justify-content:center}
+  #hero-cta .lg{display:none}
+  .tabs{flex-direction:column;width:100%;border-radius:16px;overflow:visible}
+  .tab{padding:14px 16px;font-size:.95rem;border-radius:12px;text-align:left}
+  .doc{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="https://foreverlabs.com" aria-label="Forever Labs home"><img src="./assets/fl_logo_color.svg" alt="Forever Labs" width="168" height="26"></a>
+    <div class="header-right">
+      <span class="pill hide-sm">Member update · October 2026</span>
+      <a class="hide-sm" href="#faq">Questions</a>
+      <a class="btn btn-sage" href="#your-next-step">Your next step</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero dark" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">A note to Forever Labs members</p>
+        <h1 id="hero-title">More ways to bank.<br>And now, <em>a way to understand</em> what you've banked.</h1>
+        <p class="lede">Forever Labs is adding blood banking, skin-cell (fibroblast) banking, and the Complete Baseline, a 30× long-read genetic and epigenetic record made from your own sample.<br>Here's what's new, and what it means for your membership.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-light" href="#your-next-step" id="hero-cta"><span class="lg">See what this means for you</span><span class="sm">See your offer</span></a>
+          <a class="btn btn-ghost-light" href="#ladder">Compare collections</a>
+        </div>
+        <p class="hero-note">Special offers for active members hold through October 15, 2026.</p>
+      </div>
+      <figure class="hero-figure">
+        <img src="./assets/hero.jpg" alt="Three people jogging together on a tree-lined path" width="2000" height="1333">
+        <figcaption><small>Banking since 2015</small><span>Your youngest cells, kept for the decades ahead.</span></figcaption>
+      </figure>
+    </div>
+
+    <nav class="hero-strip" aria-label="What's new">
+      <a href="#blood"><span class="num">01 · NEW</span><span class="t">Blood banking</span><span class="d">A 15-minute draw, in your home or a lab in your hometown.</span></a>
+      <a href="#fibroblasts"><span class="num">02 · NEW</span><span class="t">Fibroblast banking</span><span class="d">Skin cells from a quick skin punch. Minimally invasive.</span></a>
+      <a href="#baseline"><span class="num">03 · NEW</span><span class="t">The Complete Baseline</span><span class="d">Your genome and its methylation, read in one run.</span></a>
+    </nav>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section class="reasons" id="why" aria-labelledby="reasons-title">
+  <div class="wrap">
+    <div class="reasons-head reveal">
+      <p class="eyebrow">Why it matters</p>
+      <h2 id="reasons-title">New possibilities for your health, vitality and longevity.</h2>
+    </div>
+    <div class="reasons-grid">
+      <article class="reason reveal">
+        <span class="rq">Blood</span>
+        <h3>There are blood banks everywhere. Why bank mine?</h3>
+        <p>Blood banks hold donor blood for about six weeks. We cryopreserve your own immune cells, plasma and DNA, in your name, for decades.</p>
+        <p class="later"><span>Why it could matter later</span>If illness or demanding treatment depletes your immune system, your younger banked immune cells may help rebuild it.</p>
+      </article>
+      <article class="reason reveal">
+        <span class="rq">Fibroblasts</span>
+        <h3>What are fibroblasts, and why would I bank them?</h3>
+        <p>They make your collagen, and they're the cells behind the Nobel Prize-winning discovery that adult cells can become stem cells again. They age with you, so the best time to bank them is now.</p>
+        <p class="later"><span>Why it could matter later</span>The FDA has approved fibroblast therapies that produce new collagen. A future skin treatment could use your own cells.</p>
+      </article>
+      <article class="reason reveal">
+        <span class="rq">Long reads and methylation</span>
+        <h3>Why should I care how my DNA is read?</h3>
+        <p>Consumer DNA tests read a tiny fraction of your genome. Long-read sequencing reads all of it, plus the methylation that shows how you're aging.</p>
+        <p class="later"><span>Why it could matter later</span>Every future test can be compared against the day you banked, so you see how you're aging, not just where you stand.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY NOW -->
+<section class="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="why-grid reveal">
+      <div>
+        <p class="eyebrow">The paired asset</p>
+        <h2 id="why-title">Storage plus epigenetic analysis reveals how you age.</h2>
+      </div>
+      <div>
+        <p>Your membership has always preserved your cells at the age you banked them. Now we can also read them: the Complete Baseline records your full genome and your methylation, the epigenetic marks that shift as you age. A testing company can read you today, but it can't go back and read the younger you. We can, because we're the custodian of your cells.</p>
+      </div>
+    </div>
+    <figure class="checkpoints reveal" aria-labelledby="cp-title">
+      <div class="cp-head">
+        <h3 id="cp-title">One sample, measured against for life.</h3>
+        <p>We read your genome and methylation from the sample you bank today. Years from now, a new draw is read the same way and compared against that original, so you can see how you have aged since the day you banked. As new tests are invented, they can run on your banked cells too.</p>
+      </div>
+      <svg class="cp-svg" viewBox="0 0 1000 250" role="img" aria-label="A vial preserved today, with checkpoints at year 5, year 10 and year 20+ along a timeline, each comparing back to the original vial">
+        <defs>
+          <marker id="cpArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C8162"/></marker>
+          <linearGradient id="cpLiquid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FA385"/><stop offset="1" stop-color="#3F5E45"/></linearGradient>
+        </defs>
+        <path d="M290 196 C 290 150, 200 150, 138 170" fill="none" stroke="#5C8162" stroke-width="3" marker-end="url(#cpArrow)"/>
+        <path d="M510 196 C 510 95, 250 95, 138 135" fill="none" stroke="#5C8162" stroke-width="3" marker-end="url(#cpArrow)"/>
+        <path d="M730 196 C 730 30, 280 30, 138 98" fill="none" stroke="#5C8162" stroke-width="3" marker-end="url(#cpArrow)"/>
+        <line x1="150" y1="210" x2="960" y2="210" stroke="#B9C4BA" stroke-width="2"/>
+        <line x1="760" y1="210" x2="960" y2="210" stroke="#F6F6F0" stroke-width="2" stroke-dasharray="6 8"/>
+        <g fill="#E3B65C" stroke="#A9832F" stroke-width="2"><circle cx="290" cy="210" r="11"/><circle cx="510" cy="210" r="11"/><circle cx="730" cy="210" r="11"/></g>
+        <g>
+          <rect x="62" y="44" width="56" height="26" rx="5" fill="#3F5E45"/>
+          <rect x="58" y="66" width="64" height="8" rx="3" fill="#2E4633"/>
+          <path d="M60 78 h60 v142 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 z" fill="#E9EEE9" stroke="#8FA394" stroke-width="2"/>
+          <path d="M62 120 h56 v100 a8 8 0 0 1 -8 8 h-40 a8 8 0 0 1 -8 -8 z" fill="url(#cpLiquid)"/>
+          <rect x="68" y="86" width="6" height="120" rx="3" fill="#FFFFFF" opacity=".55"/>
+        </g>
+      </svg>
+      <svg class="cp-svg-m" viewBox="0 0 340 560" role="img" aria-label="A vial banked today, with checkpoints at year 5, year 10 and year 20+ down a timeline, each comparing back to the original vial">
+        <defs><marker id="cpArrowM" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C8162"/></marker>
+        <linearGradient id="cpLiquidM" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FA385"/><stop offset="1" stop-color="#3F5E45"/></linearGradient></defs>
+        <path d="M48 224 C 22 200, 22 160, 46 138" fill="none" stroke="#5C8162" stroke-width="2.5" marker-end="url(#cpArrowM)"/>
+        <path d="M48 324 C 10 290, 10 170, 42 138" fill="none" stroke="#5C8162" stroke-width="2.5" marker-end="url(#cpArrowM)"/>
+        <path d="M48 424 C -2 380, -2 180, 38 138" fill="none" stroke="#5C8162" stroke-width="2.5" marker-end="url(#cpArrowM)"/>
+        <line x1="62" y1="140" x2="62" y2="470" stroke="#B9C4BA" stroke-width="2"/>
+        <line x1="62" y1="470" x2="62" y2="540" stroke="#B9C4BA" stroke-width="2" stroke-dasharray="5 7"/>
+        <g fill="#E3B65C" stroke="#A9832F" stroke-width="2"><circle cx="62" cy="228" r="9"/><circle cx="62" cy="328" r="9"/><circle cx="62" cy="428" r="9"/></g>
+        <g transform="translate(40,12) scale(.72)">
+          <rect x="4" y="0" width="56" height="26" rx="5" fill="#3F5E45"/><rect x="0" y="22" width="64" height="8" rx="3" fill="#2E4633"/>
+          <path d="M2 34 h60 v142 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 z" fill="#E9EEE9" stroke="#8FA394" stroke-width="2"/>
+          <path d="M4 76 h56 v100 a8 8 0 0 1 -8 8 h-40 a8 8 0 0 1 -8 -8 z" fill="url(#cpLiquidM)"/>
+        </g>
+        <g class="t">
+          <text x="104" y="52" class="b">Banked today</text><text x="104" y="74">Your cells and Complete Baseline,</text><text x="104" y="93">recorded at this age</text>
+          <text x="104" y="224" class="b">Year 5</text><text x="104" y="246">Methylation re-measured and</text><text x="104" y="265">compared against your baseline</text>
+          <text x="104" y="324" class="b">Year 10</text><text x="104" y="346">A new draw, compared against</text><text x="104" y="365">the day you banked</text>
+          <text x="104" y="424" class="b">Year 20+</text><text x="104" y="446">New tests, run on your</text><text x="104" y="465">banked cells</text>
+          <text x="104" y="518" class="b">Future discoveries</text><text x="104" y="540">Whatever science learns next</text>
+        </g>
+      </svg>
+      <ol class="cp-labels">
+        <li class="cp-vial"><b>Banked today</b><span>Your cells and Complete Baseline, recorded at this age</span></li>
+        <li><b>Year 5</b><span>Methylation re-measured and compared against your baseline</span></li>
+        <li><b>Year 10</b><span>A new draw, compared against the day you banked</span></li>
+        <li><b>Year 20+</b><span>New tests, run on your banked cells</span></li>
+        <li class="cp-future"><b>Future discoveries</b><span>Whatever science learns next</span></li>
+      </ol>
+    </figure>
+    <p class="pair-line serif">Other companies sell you a snapshot of your biology. We build a baseline that you can compare your future self to, forever.</p>
+  </div>
+</section>
+
+<!-- BLOOD -->
+<section class="product" id="blood" aria-labelledby="blood-title">
+  <div class="wrap product-grid">
+    <div class="product-head reveal">
+      <div class="tag"><span class="n">1</span><span class="eyebrow">New · Blood banking</span></div>
+      <h2 id="blood-title">Most clinics discard your blood after an exam. We store it.</h2>
+      <p>A 15-minute draw, in your home or a lab in your hometown. A licensed phlebotomist comes to you at a time you choose, or you visit a lab near you. One draw preserves your plasma, DNA, and immune cells in the same ISO-certified biobank we've run since 2015.</p>
+      <p>No procedure, no recovery. And because we extract DNA from the draw, blood banking is also the easiest way to unlock your Complete Baseline.</p>
+      <dl class="facts">
+        <div><dt>Collection</dt><dd>$500</dd></div>
+        <div><dt>Storage</dt><dd>$150 / year</dd></div>
+        <div><dt>Time</dt><dd>~15 minutes</dd></div>
+      </dl>
+    </div>
+    <div class="card reveal">
+      <h3>What goes into your vault</h3>
+      <p class="sub">Each draw is dated and stored as its own "vintage." Future draws add new vintages; they never replace the first.</p>
+      <ul class="vault-list">
+        <li><div><b>Immune-cell (PBMC) vials</b><span>Living white cells, including cells suitable for reprogramming research</span></div></li>
+        <li><div><b>Plasma aliquots</b><span>Proteins and cell-free DNA from a specific date</span></div></li>
+        <li><div><b>Buffy-coat aliquots</b><span>A concentrated white-cell backup</span></div></li>
+        <li><div><b>Sealed reserve</b><span>Held back and left untouched</span></div></li>
+        <li><div><b>Extracted DNA archive</b><span>Ready for sequencing now or later</span></div></li>
+      </ul>
+      <p class="card-foot">Bank blood alongside cells you already store and you still pay one storage fee.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FIBROBLASTS -->
+<section class="product alt" id="fibroblasts" aria-labelledby="fibro-title">
+  <div class="wrap product-grid">
+    <div class="product-head reveal">
+      <div class="tag"><span class="n">2</span><span class="eyebrow">New · Fibroblast banking</span></div>
+      <h2 id="fibro-title">A quick skin punch, grown into a lasting cell bank.</h2>
+      <p>Skin cells drawn from a quick skin punch. Minimally invasive. Fibroblasts are the cells that build and maintain your skin, and they are among the most widely used starting cells for reprogramming research. Our lab expands early-passage fibroblasts and cryopreserves them alongside a piece of the original tissue.</p>
+      <p>Collection can be done by a registered nurse or dermatologist. No clinical setting or physician required.</p>
+      <dl class="facts">
+        <div><dt>Collection</dt><dd>$1,500</dd></div>
+        <div><dt>Storage</dt><dd>$300 / year</dd></div>
+        <div><dt>Time</dt><dd>~10 minutes</dd></div>
+      </dl>
+    </div>
+    <div class="card reveal">
+      <h3>How it works</h3>
+      <p class="sub">Collected by a registered nurse or dermatologist, processed in our lab.</p>
+      <ol class="steps">
+        <li><b>Schedule your collection</b><span>A registered nurse or dermatologist performs it. No clinical setting or physician required.</span></li>
+        <li><b>A quick skin punch</b><span>Minimally invasive, from the inner upper arm, in about ten minutes.</span></li>
+        <li><b>We grow and bank your cells</b><span>The sample travels to our lab, where fibroblasts are expanded and cryopreserved at early passage.</span></li>
+        <li><b>Tissue kept too</b><span>A piece of the original tissue is stored, so a future lab can start from either.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLETE BASELINE -->
+<section class="baseline dark" id="baseline" aria-labelledby="baseline-title">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">New · The Complete Baseline</p>
+      <h2 id="baseline-title">Your full genetic and epigenetic record, read from the cells you bank.</h2>
+      <p class="lede">The Complete Baseline analyzes your stored sample in a single deep 30× run on our own long-read instrument. Your genetic and epigenetic layers are read together, from the same collection, at the same moment in time.</p>
+    </div>
+    <div class="baseline-grid">
+      <div class="reveal">
+        <ul class="check-list">
+          <li>Genome and methylation, read together<small>Your DNA and its epigenetic marks, read from the same molecules in one deep 30× long-read run in our own lab, reviewed with a physician partner.</small></li>
+          <li>Sees what short-read tests miss<small>Long reads resolve structural variation and hard-to-read regions most consumer sequencing skips.</small></li>
+          <li>A dated reference point<small>Every future test compares against who you were on the day you banked.</small></li>
+          <li>We keep custody of your data<small>Your genomic data is held in a highly secure environment so you can run future tests on it. We will never share or sell it without your consent, and storing it is always free.</small></li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3 class="serif" style="color:var(--mist)">A baseline you can build on</h3>
+        <p style="font-size:.96rem">Because we keep both your sample and your data, future tests can run on them and every result can be compared against your original record.</p>
+        <div class="timeline" aria-hidden="true">
+          <div class="tl-track"></div>
+          <div class="tl-points">
+            <div><span class="yr">Banked</span><span class="lbl">Your cells, blood, or tissue enter the vault</span></div>
+            <div><span class="yr">Baseline</span><span class="lbl">30× genome and methylome, physician-reviewed</span></div>
+            <div><span class="yr">Future tests</span><span class="lbl">Run on your stored sample and data, when you choose</span></div>
+          </div>
+        </div>
+        <div class="price-row">
+          <div><b>$2,495</b><span>Complete Baseline</span></div>
+          <div><b>Included</b><span>in every new Lifetime plan</span></div>
+        </div>
+        <p class="fine">Every Baseline runs on one instrument, one member at a time. Reserving holds your place in the queue, and your report is delivered in your scheduled completion month. Runs on previously stored samples are checked for DNA quality before the balance is charged.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LADDER -->
+<section class="ladder" id="ladder" aria-labelledby="ladder-title">
+  <div class="wrap">
+    <div class="ladder-head reveal">
+      <div>
+        <p class="eyebrow">New ways to future-proof your health</p>
+        <h2 id="ladder-title">Store the cells that matter most to you.</h2>
+      </div>
+      <p>We offer Annual and Lifetime plans for our new tissue types, just like we do with stem cells.</p>
+    </div>
+    <div class="rungs">
+      <article class="rung new reveal">
+        <span class="badge">New</span>
+        <span class="lvl">Start here</span>
+        <h3>Blood</h3>
+        <p class="how">15-minute draw, in your home or a lab in your hometown</p>
+        <dl>
+          <div><dt>Collection</dt><dd>$500</dd></div>
+          <div><dt>Annual storage</dt><dd>$150 / yr</dd></div>
+        </dl>
+        <p class="fin">Annual plan: collection from <b>$14/month</b> with Klarna or Affirm</p>
+        <div class="life"><span class="lk">Lifetime</span><b>$139<small>/mo</small></b><span class="fin-with">with Klarna or Affirm, or $5,000 paid in full</span><span class="hsa">HSA/FSA eligible</span><span class="inc">Complete Baseline included</span></div>
+      </article>
+      <article class="rung new reveal">
+        <span class="badge">New</span>
+        <span class="lvl">Add skin</span>
+        <h3>Fibroblasts</h3>
+        <p class="how">Quick skin punch by a registered nurse or dermatologist. Minimally invasive.</p>
+        <dl>
+          <div><dt>Collection</dt><dd>$1,500</dd></div>
+          <div><dt>Annual storage</dt><dd>$300 / yr</dd></div>
+        </dl>
+        <p class="fin">Annual plan: collection from <b>$42/month</b> with Klarna or Affirm</p>
+        <div class="life"><span class="lk">Lifetime</span><b>$222<small>/mo</small></b><span class="fin-with">with Klarna or Affirm, or $8,000 paid in full</span><span class="hsa">HSA/FSA eligible</span><span class="inc">Complete Baseline included</span></div>
+      </article>
+      <article class="rung reveal">
+        <span class="badge" style="background:var(--gold-soft);color:#8A6A24">Since 2015</span>
+        <span class="lvl">Our premium collection</span>
+        <h3>Stem cells</h3>
+        <p class="how">Physician-led bone marrow collection (MSCs and HSCs)</p>
+        <dl>
+          <div><dt>Collection</dt><dd>$3,000</dd></div>
+          <div><dt>Annual storage</dt><dd>$300 / yr</dd></div>
+        </dl>
+        <p class="fin">Annual plan: collection from <b>$83/month</b> with Klarna or Affirm</p>
+        <div class="life"><span class="lk">Lifetime</span><b>$278<small>/mo</small></b><span class="fin-with">with Klarna or Affirm, or $10,000 paid in full</span><span class="hsa">HSA/FSA eligible</span><span class="inc">Complete Baseline included</span></div>
+      </article>
+    </div>
+    <div class="finance reveal">
+      <div><b>Pay over time, or use your HSA/FSA</b><span>Split your membership into installments with Klarna or Affirm. All plans are HSA/FSA eligible.</span></div>
+      <p>Monthly examples based on 36 monthly payments at 0.00% APR. Your rate and term depend on approval and are set by the financing provider.</p>
+    </div>
+    <div class="ladder-notes reveal">
+      <div><b>One storage fee.</b> Bank two or more collection types and you pay a single storage fee.</div>
+      <div><b>Analysis is optional.</b> Storage buys custody. Future tests are always your choice, never an automatic charge.</div>
+      <div><b>We keep custody of your data.</b> Held in a highly secure environment at no charge, never shared or sold without your consent.</div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR NEXT STEP -->
+<section class="next" id="your-next-step" aria-labelledby="next-title">
+  <div class="wrap">
+    <div class="next-head reveal">
+      <p class="eyebrow">What this means for you</p>
+      <h2 id="next-title">An offer for every member.</h2>
+      <p id="next-sub">Find your membership below. Member offers hold through October 15, 2026.</p>
+    </div>
+
+    <div class="ocs">
+      <article class="oc reveal">
+        <span class="for">For Active Annual Members</span>
+        <h3>Upgrade to Stem Cell Lifetime.</h3>
+        <div class="oc-pb">
+          <div class="oc-price">$139<small>/mo</small></div>
+          <p class="oc-fin">with Klarna or Affirm, or $5,000 paid in full</p>
+          <span class="hsa">HSA/FSA eligible</span>
+          <p class="oc-note">50% off the $10,000 Stem Cell Lifetime plan.</p>
+        </div>
+        <ul class="offer-includes">
+          <li>Lifetime storage of the cells you already banked</li>
+          <li>Complete Baseline included <span>· $2,495 value</span></li>
+          <li>No new procedure, no more annual renewals</li>
+        </ul>
+        <a class="btn btn-dark" href="mailto:hello@foreverlabs.com?subject=Upgrade%20to%20Lifetime">Upgrade to Lifetime</a>
+        <span class="oc-dl">Through October 15, 2026</span>
+      </article>
+      <article class="oc reveal">
+        <span class="for">For Active Lifetime Members</span>
+        <h3>Refer a friend. Get your Complete Baseline.</h3>
+        <div class="oc-pb">
+          <div class="oc-price word">Complimentary</div>
+          <p class="oc-note">when someone you refer with your personal code joins any Lifetime plan.</p>
+        </div>
+        <ul class="offer-includes">
+          <li>Complete Baseline <span>· $2,495 value</span></li>
+          <li>Read from the cells already in your vault</li>
+          <li>No new collection, no procedure</li>
+        </ul>
+        <a class="btn btn-dark" href="mailto:hello@foreverlabs.com?subject=Send%20me%20my%20referral%20code">Get my referral code</a>
+        <span class="oc-dl">Referral must join by October 15, 2026</span>
+      </article>
+      <article class="oc reveal">
+        <span class="for">For Members Who Have Not Yet Completed Collection</span>
+        <h3>Get something in your vault.</h3>
+        <div class="oc-pb">
+          <div class="oc-price">$69<small>/mo</small></div>
+          <p class="oc-fin">with Klarna or Affirm, or $2,500 paid in full</p>
+          <span class="hsa">HSA/FSA eligible</span>
+          <p class="oc-note">50% off the $5,000 Blood Lifetime plan.</p>
+        </div>
+        <ul class="offer-includes">
+          <li>A 15-minute blood draw, at home or a local lab</li>
+          <li>Lifetime blood storage</li>
+          <li>Complete Baseline included <span>· $2,495 value</span></li>
+        </ul>
+        <a class="btn btn-dark" href="mailto:hello@foreverlabs.com?subject=Claim%20my%20Blood%20Lifetime%20plan">Claim my Blood Lifetime plan</a>
+        <span class="oc-dl">Through October 15, 2026</span>
+      </article>
+    </div>
+    <p class="not-sure">Not sure which applies to you? <a href="mailto:hello@foreverlabs.com?subject=Which%20option%20fits%20my%20membership">Email us</a> and we'll look up your account. Monthly amounts are 36 payments at 0% APR with Klarna or Affirm, subject to approval.</p>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust" aria-labelledby="trust-title">
+  <div class="wrap trust-grid">
+    <div class="reveal">
+      <p class="eyebrow" id="trust-title">Banking since 2015</p>
+      <h2 class="trust-h">The same vault, now doing more.</h2>
+    </div>
+    <div class="trust-points reveal">
+      <div><b>America's first ISO-accredited biobank</b><span>Storing adult cells for members continuously since 2015.</span></div>
+      <div><b>Our own long-read lab</b><span>Sequencing runs on our instrument, reviewed with a physician partner.</span></div>
+      <div><b>Your sample, your control</b><span>Your material and data are held in your name and never shared or sold without your consent.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="aside reveal">
+      <p class="eyebrow">Member questions</p>
+      <h2 id="faq-title">Common questions</h2>
+      <p>Anything else? Reply to our email or write to <a href="mailto:hello@foreverlabs.com">hello@foreverlabs.com</a>. It comes to our team directly.</p>
+    </div>
+    <div class="reveal">
+      <details>
+        <summary>Does anything change about my current membership?</summary>
+        <div class="a"><p>No. Your existing plan, stored cells, and terms stay exactly as they are. Everything on this page is optional and adds to what you already have.</p></div>
+      </details>
+      <details>
+        <summary>What is the Complete Baseline, and how is it different from a consumer DNA test?</summary>
+        <div class="a"><p>It's a single deep 30× long-read run that reads your full genome and your methylation (epigenetic) marks together, from your own stored sample. Most consumer tests read a small subset of your DNA with short reads. Long reads resolve structural variation and hard-to-read regions. Because we keep both your sample and your data, future tests can run on them and be compared against this baseline.</p><p>The Complete Baseline is a member analysis service reviewed with a physician. It is not a diagnostic test.</p></div>
+      </details>
+      <details>
+        <summary>Can you run the Complete Baseline on cells I banked years ago?</summary>
+        <div class="a"><p>Yes, in most cases. We use one vial for the run and leave the rest untouched. We check DNA quality on that vial before charging the balance, so you don't pay the full price for a run we can't complete.</p></div>
+      </details>
+      <details>
+        <summary>When will I receive my results?</summary>
+        <div class="a"><p>Every Baseline runs on one instrument, one member at a time. When you reserve, we schedule your run and confirm your completion month. Your physician-reviewed report is delivered in that month.</p></div>
+      </details>
+      <details>
+        <summary>How does the blood draw work?</summary>
+        <div class="a"><p>A licensed phlebotomist comes to your home at a time you choose, or you visit a lab in your hometown. The draw takes about 15 minutes. Your sample ships to our lab, where it's processed into plasma, immune-cell, and DNA aliquots and cryopreserved.</p></div>
+      </details>
+      <details>
+        <summary>If I add blood or fibroblasts, do I pay another storage fee?</summary>
+        <div class="a"><p>No. If you store two or more collection types, you pay a single storage fee. Lifetime members who add blood are covered by their existing Lifetime storage.</p></div>
+      </details>
+      <details>
+        <summary>I paid for stem-cell banking but never completed my procedure. What happens to that?</summary>
+        <div class="a"><p>Your membership and stem-cell benefit stay in place. Blood banking is simply a faster way to get your biology into the vault now. Marrow collection remains available whenever you're ready.</p></div>
+      </details>
+      <details>
+        <summary>Who owns and controls my stored material and data?</summary>
+        <div class="a"><p>Your material and data are held in your name under your Forever Labs service agreement. We maintain custody of your genomic data in a highly secure environment so you can run future tests on it, and we will never share or sell your data without your consent.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="close dark" aria-labelledby="close-title">
+  <div class="wrap reveal">
+    <p class="eyebrow">You can't get today back</p>
+    <h2 id="close-title">Your cells today are the youngest they will ever be.</h2>
+    <p>Every option on this page makes the copy of you in our vault more complete, and more useful to have.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-light" href="#your-next-step">See your next step</a>
+      <a class="btn btn-ghost-light" href="mailto:hello@foreverlabs.com?subject=Member%20update%20question">Ask us a question</a>
+    </div>
+    <div class="signoff"><b>The Forever Labs team</b>ISO-certified biobank, Ann Arbor, Michigan · Laboratory in Jupiter, Florida</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>© 2026 Forever Labs. Member terms effective October 1–15, 2026.</span>
+      <span><a href="https://foreverlabs.com/privacy">Privacy</a><a href="https://foreverlabs.com/terms">Terms</a><a href="mailto:hello@foreverlabs.com">Contact</a></span>
+    </div>
+    <p>Forever Labs banks and stores cells and tissue. We do not offer or provide medical treatment, and nothing here is medical advice or a claim that stored cells treat, prevent, or cure any condition. The Complete Baseline is a member analysis service reviewed by a physician; it is not a diagnostic test and is not intended to diagnose or treat disease. Pricing subject to change.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // reveal on scroll
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>
